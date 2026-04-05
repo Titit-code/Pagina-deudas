@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Deudas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>💰 Gestión de Deudas</h1>
+
+  <div class="section">
+    <h2>Registrar Deuda</h2>
+    
+    <input type="text" id="nombre" placeholder="Nombre">
+    <textarea id="detalles" placeholder="Detalles"></textarea>
+    <input type="date" id="fecha">
+    <input type="number" id="monto" placeholder="Monto">
+
+    <button id="btnAgregar">Agregar deuda</button>
+  </div>
+
+  <div class="section">
+    <h2>Lista de Deudas</h2>
+
+    <input type="text" id="busqueda" placeholder="Buscar por nombre">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Monto</th>
+          <th>Pagado</th>
+          <th>Restante</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaDeudas"></tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Historial</h2>
+    <div id="historial"></div>
+  </div>
+
+  <div id="modalPago" class="modal hidden">
+  <div class="modal-content">
+    <h3>Registrar pago</h3>
+    <input type="number" id="inputPago" placeholder="Monto">
+    <div class="modal-buttons">
+      <button id="confirmarPago">Confirmar</button>
+      <button id="cancelarPago">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
